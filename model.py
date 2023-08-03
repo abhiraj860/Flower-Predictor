@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 
-data = pd.read_csv('ML_Deployment_Test\Iris.csv')
+data = pd.read_csv('Flowers_Pred_ML_Deployment_Test\iris.csv')
 
 varietyMappings = {0: 'Setosa', 1: 'Versicolor', 2:'Virginica'}
 

@@ -1,10 +1,15 @@
 import model
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 
 app = Flask(__name__,template_folder="templates")
-@app.route('/home')
+@app.route('/')
+def home1():
+    return render_template('home.html') # Render home.html
+
+@app.route('/home',methods=['GET'])
 def home():
     return render_template('home.html') # Render home.html
+
 
 @app.route('/classify',methods=['GET'])
 def classify_type():
